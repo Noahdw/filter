@@ -1,0 +1,16 @@
+﻿<Window x:Class="Filter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Filter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="666.892">
+    <Grid Margin="0,0,2,0">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="497"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="507,75,0,0" VerticalAlignment="Top" Width="136" Minimum="0.1" ValueChanged="slider_ValueChanged" Value="0.5" Maximum="1" TickFrequency="0.1" SmallChange="0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="512,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Text="{Binding ElementName=slider,Path=Value}"/>
+        <Button x:Name="filterChange" Content="Change" HorizontalAlignment="Left" Margin="554,30,0,0" VerticalAlignment="Top" Width="75" Click="filterChange_Click"/>
+
+    </Grid>
+</Window>
